@@ -1,9 +1,9 @@
-here's the README file for the project:
+Here's the README file:
 
 ```
-# Gesture Detection in Video Sequences
+# Gesture Detection using MobileNetV2 and TensorFlow
 
-This project is a Streamlit web application that detects gestures in video sequences using the Inflated 3D Convnet (I3D) model from TensorFlow Hub.
+This project is a Streamlit web application for detecting gestures in video sequences using MobileNetV2 as the feature extraction model.
 
 ## Overview
 
@@ -11,7 +11,7 @@ The application allows users to upload two videos:
 1. Gesture Video: Contains the gesture that needs to be detected in the test video.
 2. Test Video: The video in which the gesture needs to be detected.
 
-After uploading the videos, the user can click the "Process Videos" button to analyze the videos. The application will then determine if the gesture from the gesture video is present in the test video. If detected, it will display "Gesture is DETECTED in the test video." Otherwise, it will display "Gesture is NOT DETECTED in the test video."
+After uploading the videos, the user can click the "Process Videos" button to analyze the videos. The application extracts features from both videos using MobileNetV2 and compares the features to determine if the gesture from the gesture video is present in the test video. It then annotates frames in the test video where the gesture is detected with "DETECTED" in bright green.
 
 ## Usage
 
@@ -47,6 +47,7 @@ After uploading the videos, the user can click the "Process Videos" button to an
 
 ## Credits
 
-- TensorFlow Hub: https://tfhub.dev/deepmind/i3d-kinetics-400/1
+- TensorFlow Hub: https://tfhub.dev/google/tf2-preview/mobilenet_v2/feature_vector/4
 - Streamlit: https://streamlit.io/
 ```
+
